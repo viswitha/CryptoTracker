@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,intial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  	<link href="https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+  	<style type="text/css">
+  		.tab{
+  			border: 2px solid #000000;
+  			border-radius: 5px;
+  			padding: 20px;
+  			background-color: #000000;
+  		}
+  	</style>
+	<title>Crypto Tracker</title>
+</head>
+<body style="background-color: #111111">
+	<div class="container mt-2">
+		<div class="row justify-content-center">
+			<h1 class="col-md-7 text-center" style="font-family: 'Zen Tokyo Zoo',cursive;font-size: 60px; color: blue;"><b>crypto Tracker</b></h1>
+			<div class="col-md-6 row justify-content-center m-5 tab">
+				<div class="col-10">
+					<form id="searchForm">
+						<div class="form-row">
+							<div class="col-12 form-group">
+								<label for="xyz"><b>Coin Type</b></label>
+								<select name="coinType" class="form-control" id="xyz"> 
+									<option value="btc-usd">Bitcoin-USD</option>
+									<option value="doge-usd">Dogecoin-USD</option>
+									<option value="eth-usd">Etherum-USD</option>
+									<option value="btc-doge">Bitcoin-Dogecoin</option>
+									<option value="bnb-usd">Binance-USD</option>
+								</select>
+							</div>
+						</div>
+						<button type="submit" class="col-12 btn btn-primary">Get Price</button>
+					</form>
+				</div>
+			</div>
+			<div class="col-md-7 row text-center justify-content-center">
+				<table id="tableResult" class="col-md-7 m-4" border="1px" style="background-color: white;">
+					
+				</table>
+				
+			</div>
+		</div>
+	</div>
+	
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
