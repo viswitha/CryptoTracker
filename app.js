@@ -1,5 +1,14 @@
 const form=document.querySelector('#searchForm');
 const res=document.querySelector('#tableResult');
+let chartEl = document.getElementById("chart");
+
+let coinIds ={
+	"btc-usd":859,
+	"btc-doge":859,
+	"eth-usd":145,
+	"bnb-usd":1209,
+	"doge-usd":280
+};
 
 var upd;
 form.addEventListener('submit',(e)=>{
@@ -8,6 +17,9 @@ form.addEventListener('submit',(e)=>{
 	}
 	e.preventDefault();
 	const ctype=form.elements.coinType.value;
+	let coinId = coinIds[ctype];
+	let chartUrl =`https://widget.coinlib.io/widget?type=chart&theme=light&coin_id=${coinId}&pref_coin_id=1505`;
+	chartEl.src = chartUrl;
 	fetchPrice(ctype);
 });
 function timeConverter(UNIX_timestamp){
