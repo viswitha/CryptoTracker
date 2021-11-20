@@ -18,7 +18,7 @@ form.addEventListener('submit',(e)=>{
 	e.preventDefault();
 	const ctype=form.elements.coinType.value;
 	let coinId = coinIds[ctype];
-	let chartUrl =`https://widget.coinlib.io/widget?type=chart&theme=light&coin_id=${coinId}&pref_coin_id=1530`;
+	let chartUrl =`https://widget.coinlib.io/widget?type=chart&theme=dark&coin_id=${coinId}&pref_coin_id=1530`;
 	chartEl.src = chartUrl;
 	fetchPrice(ctype);
 });
