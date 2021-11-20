@@ -4,7 +4,7 @@ let chartEl = document.getElementById("chart");
 
 let coinIds ={
 	"btc-usd":859,
-	"btc-doge":859,
+	"usdt-usd":637,
 	"eth-usd":145,
 	"bnb-usd":1209,
 	"doge-usd":280
